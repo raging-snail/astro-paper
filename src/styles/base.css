@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'LXGW WenKai Mono';
+  src: url('../../public/fonts/LXGWWenKaiMono-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root,
   html[data-theme="light"] {

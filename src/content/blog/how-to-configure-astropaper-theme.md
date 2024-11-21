@@ -22,8 +22,15 @@ The important configurations lies in `src/config.ts` file. Within that file, you
 
 During development, it's okay to leave `SITE.website` empty. But in production mode, you should specify your deployed url in `SITE.website` option since this will be used for canonical URL, social card URL etc.. which are important for SEO.
 
+**测试中文字体**
+
+_测试中文字体_
+
+测试中文字体测试中文字体测试中文字体测试中文字体测试中文字体测试中文字体测试中文字体测试中文abcdefgabcdefgabcdefgabcdefgabcdefgabcdefg
+
 ```js
 // file: src/config.ts
+你好
 export const SITE = {
   website: "https://astro-paper.pages.dev/",
   author: "Sat Naing",
