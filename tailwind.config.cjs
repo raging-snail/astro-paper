@@ -64,7 +64,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "LXGW WenKai Mono", ...fontFamily.mono],
+        mono: ["MapleMono NF CN Regular", ...fontFamily.mono],
       },
       colors: {
         primary: colors.pink,
