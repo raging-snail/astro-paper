@@ -11,13 +11,15 @@
     "astro": "astro",
     "format:check": "prettier --check . --plugin=prettier-plugin-astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/tailwind": "^5.1.0",
     "@resvg/resvg-js": "^2.6.2",
+    "@vercel/speed-insights": "^1.1.0",
     "astro": "^4.16.3",
     "astro-paper": "file:",
     "fuse.js": "^7.0.0",
@@ -44,6 +46,7 @@
     "eslint": "^9.10.0",
     "eslint-plugin-astro": "^1.2.4",
     "globals": "^15.9.0",
+    "husky": "^9.1.7",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.6",
