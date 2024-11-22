@@ -14,6 +14,7 @@ interface EditPostProps {
 interface Props extends DatetimesProps, EditPostProps {
   size?: "sm" | "lg";
   className?: string;
+  readingTime: string | undefined;
 }
 
 export default function Datetime({
@@ -23,6 +24,7 @@ export default function Datetime({
   className = "",
   editPost,
   postId,
+  readingTime,
 }: Props) {
   return (
     <div
@@ -43,13 +45,18 @@ export default function Datetime({
           Updated:
         </span>
       ) : (
-        <span className="sr-only">Published:</span>
+        // <span className="sr-only">Published:</span>
+        <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+          Published:
+        </span>
       )}
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
         <FormattedDatetime
           pubDatetime={pubDatetime}
           modDatetime={modDatetime}
         />
+        <span aria-hidden="true"> | </span>
+        <span> ({readingTime})</span> {/* display reading time */}
         {size === "lg" && <EditPost editPost={editPost} postId={postId} />}
       </span>
     </div>
@@ -75,7 +82,7 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
   return (
     <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
-      <span aria-hidden="true"> | </span>
+      {/*<span aria-hidden="true"> | </span>*/}
       <span className="sr-only">&nbsp;at&nbsp;</span>
       <span className="text-nowrap">{time}</span>
     </>
